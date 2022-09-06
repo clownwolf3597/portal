@@ -1,0 +1,64 @@
+:host {
+    .home-container {
+        height: calc(100% - 180px);
+        background: url('https://c.tenor.com/Zco-fadJri4AAAAd/code-matrix.gif');
+        padding: 50px;
+
+        .buttons-container {
+            text-align: center;
+            height: 150px;
+            margin-bottom: 30px;
+
+
+            button {
+                height: 120px;
+                width: 120px;
+                font-weight: bold;
+                background: #36ba01;
+                border: none;
+                outline: none;
+                margin: 10px;
+
+                &:hover {
+                    background-color: #35ba01ad;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .id-container {
+            background: #FFF;
+            height: 45px;
+            width: 350px;
+            margin: auto;
+            border-radius: 10px;
+            padding: 4px 20px;
+
+            .id-input {
+                input {
+                    height: 35px;
+                    padding: 5px;
+                    width: calc(100% - 10px);
+                    border: none;
+                    outline: none;
+                    font-size: 16px;
+                    font-family: 'Orbitron', sans-serif;
+                }
+            }
+
+            .id-value {
+                padding: 15px 0 0 0;
+                text-align: center;
+            }
+        }
+
+        .loader-container {
+            text-align: center;
+
+            img {
+                max-height: 200px;
+                width: 400px;
+            }
+        }
+    }
+}

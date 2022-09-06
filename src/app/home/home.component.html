@@ -1,0 +1,23 @@
+<div class="home-container">
+    <div class="buttons-container" *ngIf="!showLoader">
+        <ng-container *ngIf="!showIdContainer">
+            <button (click)="generateNewSession()">Create New Session</button>
+            <button (click)="showSessionInputField()">Connect With Partner</button>
+        </ng-container>
+        <ng-container *ngIf="showIdContainer">
+            <button [routerLink]="[sessionId]">Continue</button>
+        </ng-container>
+    </div>
+    <div class="id-container" *ngIf="showIdContainer">
+        <div class="id-input" *ngIf="!sessionId">
+            <input type="text" placeholder="Enter your partner's session ID here..." />
+        </div>
+        <div class="id-value" *ngIf="sessionId">
+            Your session ID is <b>{{sessionId}}</b>
+        </div>
+    </div>
+    <div class="loader-container" *ngIf="showLoader">
+        <img
+            src="https://media2.giphy.com/media/hRLz2uLh5AX1zPsjOS/giphy.gif?cid=ecf05e47i8dx1mw0qmb1ijdeigflw091gn71i0slgcyb1j0y&rid=giphy.gif&ct=g" />
+    </div>
+</div>
